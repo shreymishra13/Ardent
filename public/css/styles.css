@@ -1,0 +1,665 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+body {
+    font-family: 'PT Serif', serif;
+    line-height: 1.5;
+    text-align: center;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+.about-us-content {
+    width: 90vw;
+    text-align: left;
+    margin: auto;
+    margin-top: 40px;
+    font-family: 'PT Serif', serif;
+}
+
+.about-us {
+    color: white;
+    background-color: #301E67;
+    padding: 120px;
+    width: 95vw;
+    margin: auto;
+    font-family: 'PT Serif', serif;
+    font-size: 90px;
+}
+
+.address {
+    margin-top: 228px;
+    padding: 42px;
+    text-align: left;
+}
+
+.address a {
+    color: grey;
+}
+
+.address p {
+    margin-bottom: 40px;
+}
+
+.button-light {
+    margin: auto;
+    margin-right: 60px;
+    width: 142px;
+    height: 49px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.button-light:hover {
+    background-color: black;
+    color: white;
+}
+
+#carousel-img {
+    height: 5%;
+}
+
+.button-dark {
+    margin: auto;
+    margin-right: 60px;
+    width: 142px;
+    height: 49px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.button-dark:hover {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+}
+
+.links h6:hover {
+    color: black;
+    font-size: 110%;
+}
+
+.terms-conditions h2 {
+    font-family: 'PT Serif', serif;
+    font-size: 80px;
+}
+.detail-form-section{
+        background-color: #cae1da;
+      width: 80vw; 
+      height: 80vh; 
+      margin: 10vh auto; 
+   
+}
+.detail-form-row{
+    height : 80vh;
+    
+}
+.detail-form-col{
+
+    display : flex ;
+    align-items: center; 
+    justify-content: center;
+    
+}
+
+#library-img{
+    width: 80%;
+}
+
+.terms-conditions-content dl {
+    width: 80vw;
+    margin: auto;
+    text-align: left;
+    margin-top: 40px;
+}
+
+.terms-conditions-content dd {
+    color: grey;
+}
+
+.terms-conditions-content dt {
+    margin: 20px;
+    margin-left: 0px;
+    font-size: x-large;
+}
+
+.background-img {
+    height: 600px;
+    width: 1400px;
+}
+
+#privacy-policy {
+    width: 80vw;
+    margin: auto auto 40px;
+    text-align: left;
+}
+
+#privacy-policy h1 {
+    text-align: center;
+    font-family: 'PT Serif', serif;
+    font-size: 80px;
+    margin-bottom: 8vh;
+}
+
+#privacy-policy dt {
+    margin: 40px;
+    margin-left: 0px;
+    font-size: x-large;
+}
+
+#privacy-policy dd {
+    color: grey;
+}
+
+#note {
+    margin-top: 5vh;
+    font-weight: bolder;
+}
+
+.blog {
+    width: 1192px;
+    margin: auto;
+    margin-top: 82px;
+}
+
+.blog h1 {
+    margin: auto;
+}
+
+.blog-items img {
+    width: 100%;
+    margin: 40px auto 40px;
+}
+
+.blog-items h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.blog-items-text {
+    text-align: left;
+    width: 70%;
+    margin: auto;
+}
+
+.column {
+    text-align: left;
+    padding: 30px;
+}
+
+.contact-us-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form {
+    width: 50vw;
+    border: 1px solid rgb(209, 199, 199);
+    margin: 50px auto;
+    padding: 72px;
+    text-align: left;
+}
+
+.contact-form button {
+    margin-left: 258px;
+    margin-top: 26px
+}
+
+.contact-form p {
+    margin-bottom: 30px;
+}
+
+.contact-form input {
+    margin-bottom: 30px;
+    width: 100%;
+    border: 1px solid rgb(209, 199, 199);
+    padding: 7px;
+}
+
+.contact-form textarea {
+    border: 1px solid rgb(209, 199, 199);
+    width: 100%;
+    padding: 7px;
+}
+
+.contact-team {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    margin: 70px auto 70px;
+}
+
+.contact-team img {
+    width: 330px;
+    background-color: black;
+}
+
+.contact-team a {
+    color: grey;
+}
+
+.books-navbar {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 40px;
+    background-color: #B6EADA;
+}
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+    }
+    .card-registration .select-arrow {
+    top: 13px;
+    }
+.forget-password-btn:hover{
+    font-size: 110%;
+
+}
+
+#seller-row{
+    width:80vw;
+    margin:auto;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    font-size: x-large;
+}
+.func{
+    background-color: #9fafaa39;
+    padding: 20px;
+    width: 17vw;
+    color: black;
+}
+.func i:hover{
+    font-size: 110%;
+}
+
+.books-navbar h3 {
+    font-family: 'Merienda', cursive;
+    font-size: 40px;
+}
+.wrong-password-status{
+    background-color: rgb(239, 145, 145);
+    color: black;
+}
+
+.books-navbar form {
+    display: flex;
+}
+.registration-form
+{
+    width: 80vw;
+    height: 80vh;
+    margin: auto;
+    padding: 10px;
+    /* background-color: #e1dfd7; */
+    margin-top: 40px;
+    background-image: url(https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGlicmFyeXxlbnwwfHwwfHw%3D&w=1000&q=80);
+   
+}
+
+
+.btn-outline-success {
+    background-color: white;
+    margin-left: 10px;
+    border: #301E67 1px solid;
+    color: #301E67;
+}
+
+.btn-outline-success:hover {
+    background-color: #301E67;
+    color: white;
+}
+
+.form-inline {
+    display: flex;
+    height: 50px;
+    margin: auto;
+    margin-right: 20px;
+}
+
+
+#form {
+    margin-left: 40%;
+    font-size: 50px;
+    color: black;
+}
+
+.buy-now {
+    margin-top: 20px;
+}
+
+.content {
+    background-image: url("https://wallpapercave.com/wp/wp2853390.jpg");
+    color: white;
+    height: 600px;
+    width: 1462px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lobster', cursive;
+}
+
+.contents {
+    display: flex;
+    margin: 170px;
+    text-align: left;
+}
+
+.content-img {
+    height: 380px;
+}
+
+.content-text {
+    margin-right: 100px;
+}
+
+.content-text h6,
+p {
+    color: grey;
+}
+
+.content-text-2 {
+    margin-left: 100px;
+}
+
+.content-text-3 h6 {
+    color: grey;
+    margin-top: 40px;
+}
+.me-3{
+    margin: 100px;
+}
+
+.content-text-4 {
+    display: flex;
+    margin: 50px 166px;
+}
+
+.content-con {
+    text-align: center;
+}
+
+.content-con h1 {
+    font-size: 70px;
+}
+
+.content-con h5 {
+    color: rgb(133, 131, 131);
+}
+
+.content-con button {
+    background-color: white;
+    border: none;
+    padding: 18px 29px;
+    margin-top: 24px;
+}
+
+.contact-detail {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.copyright {
+    padding-bottom: 2vh;
+    background-color: #B6EADA;
+    color: #301E67;
+    font-size: larger;
+}
+
+.btn-success {
+    margin-bottom: 40px;
+}
+
+.card {
+    margin: 20px;
+    width: 18rem;
+}
+
+.card-img-top {
+    align-self: center;
+    margin-top: 10px;
+}
+
+#news-letter-form {
+    display: flex;
+    margin-top: 30px;
+}
+
+.card-img-top-round {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.card-deck {
+    display: flex;
+    justify-content: center;
+    margin: 5vh 5vh;
+}
+
+.btn-outline-info {
+    color: #B6EADA;
+    border-color: #B6EADA;
+}
+
+.btn-outline-info:hover {
+    background-color: #B6EADA;
+    border-color: #301E67;
+    color: #301E67;
+}
+
+.card-group {
+    margin-top: 5vh;
+}
+
+.title-heading {
+    border: 1px solid #B6EADA;
+    display: inline;
+    padding: 10px;
+    color: cadetblue;
+    margin-bottom: 10vh;
+}
+
+.copyright-icon {
+    margin: 1vw;
+    margin-bottom: 4vh;
+}
+
+.feature-box {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.feature {
+    margin: 5vw;
+}
+
+.feature p {
+    margin-top: 1vh;
+}
+
+hr {
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.links {
+    display: flex;
+    width: 70vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.links h6 {
+    padding: 35px;
+    color: grey;
+}
+
+.navigation-bar {
+    display: flex;
+}
+
+.navigation-bar h3 {
+    margin-top: 41px;
+    margin-left: 37px;
+    color: black;
+    font-family: 'Merienda', cursive;
+}
+
+.copyright {
+    padding-top: 20px;
+}
+
+.copyright h5 {
+    font-family: 'Merienda', cursive;
+    font-size: 50px;
+}
+
+.copyright h6 {
+    font-family: 'PT Serif', serif;
+    font-size: 20px;
+    color: #301E67;
+}
+
+.copyright ul li {
+    color: grey;
+    list-style-image: url(/images/211607_right_arrow_icon\ \(2\).png);
+    list-style-position: outside;
+    text-align: left;
+}
+
+.refund-text {
+    height: 70vh;
+    padding-top: 20vh;
+    align-items: center;
+}
+
+.refund-text h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 300%;
+}
+
+.refund-text h5 {
+    margin-top: 5vh;
+    font-size: x-large;
+    width: 80vw;
+    margin: auto;
+}
+
+#element2 {
+    text-align: left;
+}
+
+#element2 h6 {
+    padding-left: 30px;
+}
+
+#element1 {
+    margin: 30px;
+}
+
+.quote {
+    text-align: center;
+    margin-top: 130px;
+}
+
+.quote h6 {
+    color: grey;
+}
+
+.quote h1 {
+    margin: auto;
+    width: 960px;
+}
+
+.text-2 {
+    width: 70vw;
+    margin: auto;
+    margin-top: 110px;
+}
+
+.text-2 p {
+    margin-top: 80px;
+}
+
+.text-3 h6 {
+    margin-top: 50px;
+}
+
+.text-3 h1 {
+    margin-bottom: 40px;
+}
+
+.text-4 {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    width: 70vw;
+    margin: auto;
+}
+
+.text-4 h5 {
+    margin-bottom: 20px;
+}
+
+.text-6 {
+    margin: 75px auto 75px;
+}
+
+.text-6 h6 {
+    color: grey;
+}
+
+.text-7 img {
+    width: 80vw;
+}
+
+.text-7 img:hover {
+    opacity: 70%;
+}
+
+.text-7 h3 {
+    margin-top: 40px;
+}
+
+.text-7 h4 {
+    margin-bottom: 40px;
+    color: grey;
+}
+
+.logo-img {
+    width: 20%;
+    margin-bottom: 30px;
+}
+
+#element2 li:hover {
+    font-size: 105%;
+}
+
+#email-link:hover {
+    font-size: 105%;
+}
+
+.box {
+    padding-right: 77px;
+    margin-top: 35px;
+}
+
+.registeration {
+    display: flex;
+    align-items: center;
+}

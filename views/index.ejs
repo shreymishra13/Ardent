@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ardent</title>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- CSS links -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/ed7230efcb.js" crossorigin="anonymous"></script>
+
+    <!-- icon link -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+
+</head>
+
+<body>
+
+    <!-- navigation bar    -->
+    <%- include('./header-navbar'); %>
+
+
+<!-- book image carousel -->
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="3000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-25 h-25" src="/images/book-1.png" alt="First slide">
+                    <img class="w-25 h-25" src="/images/book-4.png" alt="First slide">
+                    <img class="w-25 h-25" src="/images/book-5.png" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class=" w-25 h-25" src="/images/book-2.png" alt="Second slide">
+                    <img class=" w-25 h-25" src="/images/book-6.png" alt="Second slide">
+                    <img class=" w-25 h-25" src="/images/book-7.png" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class=" w-25 h-25" src="/images/book-3.png" alt="Third slide">
+                    <img class=" w-25 h-25" src="/images/book-8.png" alt="Third slide">
+                    <img class=" w-25 h-25" src="/images/book-9.png" alt="Third slide">
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+
+
+
+        <div class="content-con">
+            <h1>Grow Your Mind!!</h1>
+            <h5>Today a Reader, Tomorrow a Leader</h5>
+
+        </div>
+
+        <hr>
+
+
+
+        <div class="feature-box">
+
+            <div class="feature">
+                <i class="fa-solid fa-building-lock fa-2xl">
+
+                </i>
+                <p>Secure Payments</p>
+            </div>
+            <div class="feature">
+                <i class="fa-solid fa-rotate-left fa-2xl">
+
+                </i>
+                <p>Easy Returns</p>
+            </div>
+            <div class="feature">
+                <i class="fa-solid fa-headset fa-2xl">
+
+                </i>
+                <p>24x7 customer support</p>
+            </div>
+            <div class="feature">
+                <i class="fa-solid fa-truck-fast fa-2xl">
+
+                </i>
+                <p>Fast shipping</p>
+            </div>
+
+        </div>
+
+
+
+        
+
+
+
+        <!-- review section -->
+
+        <h3 class="title-heading">Client's Reviews</h3>
+
+
+        <div class="card-deck">
+            
+        <div class="card" >
+            <img class="card-img-top card-img-top-round" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGJxdxsoNhWlmPLlJCLXxjKQzNYm11Uqs3Dtsv0w9oYNQnKKEoEzPIerOKx1pVpQyjcSs&usqp=CAU" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Roman Reign</h5>
+              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius exercitationem obcaecati molestias?</p>
+              <a href="#" class="btn btn-outline-info">Read More</a>
+            </div>
+          </div>
+          
+        <div class="card" >
+            <img class="card-img-top card-img-top-round" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROu97xr7NyoK8Q-iR9g2fZCRjZgoHX8NLalw&usqp=CAU" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Sam Morek</h5>
+              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius exercitationem obcaecati molestias?</p>
+              <a href="#" class="btn btn-outline-info">Read More</a>
+            </div>
+          </div>
+          <div class="card" >
+            <img class="card-img-top card-img-top-round" src="data:image/jpeg;base64,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" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Arnold Satur</h5>
+              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius exercitationem obcaecati molestias?</p>
+              <a href="#" class="btn btn-outline-info">Read More</a>
+            </div>
+          </div>
+          <div class="card" >
+            <img class="card-img-top card-img-top-round" src="https://www.hakuhodo-global.com/wp_admin/wp-content/uploads/2017/11/Shuntaro_Ito2square.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Eric Rowan</h5>
+              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius exercitationem obcaecati molestias?</p>
+              <a href="#" class="btn btn-outline-info">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="title-heading">Books</h3>
+
+
+        <!-- book section -->
+<div class="container">
+  <div class="card-deck">
+    <div class="row">
+      <!-- including book using java language -->
+    <% books.forEach(function(book){%>
+      <div class="col-3">
+    <div class="card" >
+      <img class="card-img-top" src="data:image/<%=book.book_img.contentType%>;base64,
+      <%=book.book_img.data.toString('base64')%>" alt="Card image cap">
+      <div class="card-body" >
+        <h5 class="card-title"><%= book.book_name %></h5>
+        <p class="card-text"><%= book.book_description %></p>
+        <h5 class="card-title">Rs.<%= book.book_price %></h5>
+        <button class="btn btn-primary">Buy Now</button>
+        <button class="btn btn-outline-primary">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+    <%})%>
+  </div>
+  </div>
+</div>
+               <a href="book"> <button class="btn btn-success" >Get more books</button></a>
+<!-- footer section including using Java -->
+        <%- include("./footer"); %>
+
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
+
+</body>
+
+</html>
