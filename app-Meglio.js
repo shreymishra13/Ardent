@@ -1,4 +1,6 @@
+
 const mongoose = require("mongoose");
+
 const express = require("express");
 const ejs = require('ejs');
 const bodyParser = require("body-parser");
@@ -9,6 +11,11 @@ const app = express();
 var fs = require('fs');
 var path = require('path');
 const saltRounds = 10;
+const PORT= 5000
+
+
+
+
 
 //Schema declarations
 const customerSchema = new mongoose.Schema({
@@ -87,7 +94,7 @@ app.use(bodyParser.urlencoded({
 
 //connecting with the database MONGODB
 mongoose.set("strictQuery", true);
-mongoose.connect("mongodb+srv://admin-shrey:shrey001@cluster0.kto3pxv.mongodb.net/eBookDB", {
+mongoose.connect("mongodb://0.0.0.0:27017/eBookDB", {
 
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -510,8 +517,13 @@ app.post("/forget-password", (req, res) => {
         })
     }
 });
+// app.listen(PORT, (err) => {
+//     if (!err) {
+//         console.log("running on server ${PORT}");
+//     }
+// });
 app.listen(3000, (err) => {
-    if (err) {
+    if (!err) {
         console.log("running on server");
     }
 });
