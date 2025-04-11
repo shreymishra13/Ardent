@@ -26,7 +26,14 @@
     "passport": "^0.6.0",
     "passport-google-oauth20": "^2.0.0",
     "passport-local": "^1.0.0",
+<<<<<<< HEAD
     "passport-local-mongoose": "^7.1.2",
+=======
+  
+>>>>>>> 6af21cd04059abe9f95a513ea43c28977990aa78
     "serve-favicon": "^2.5.0"
+  },
+     "engines": {
+    "node": ">=17 <18"
   }
 }
