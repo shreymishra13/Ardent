@@ -6,7 +6,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Document(collection = "books")
 @Getter
@@ -32,6 +32,6 @@ public class Book{
     private Double discount;
     private Integer stock;
     private String sellerId;
-    private Date createdAt;
+    private LocalDate createdAt;
 
 }

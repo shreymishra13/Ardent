@@ -1,0 +1,24 @@
+2026-01-03 20:16:42 WARN  [main] o.s.b.s.a.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 3640c791-4301-4a2b-a98b-0a71dea5ae0a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-01-03 20:17:23 WARN  [main] o.s.b.s.a.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 3b7989b4-d630-49ae-9078-cb5bc5d2a0fd
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-01-03 22:33:49 WARN  [main] o.s.b.s.a.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 5fa9efbc-6459-4556-a057-81dab5fc7c10
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-01-03 22:44:08 WARN  [main] o.s.b.s.a.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 4209cc70-aad7-40e3-823e-c407ba12a1af
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+

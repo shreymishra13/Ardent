@@ -6,7 +6,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.index.Indexed;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Document(collection = "reviews")
 @Getter
@@ -28,7 +28,7 @@ public class Review {
     private Short rating;
     private String message;
 
-    private Date createdAt;
+    private LocalDate createdAt;
 
 
 

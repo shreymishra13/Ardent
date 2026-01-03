@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Document(collection = "users")
 @Getter
@@ -28,7 +28,7 @@ public class User {
     private String pincode;
     private String contactNo;
     private UserRole userRole;
-    private Date createdAt;
-    private Date updatedAt;
+    private LocalDate createdAt;
+    private LocalDate updatedAt;
 
 }
