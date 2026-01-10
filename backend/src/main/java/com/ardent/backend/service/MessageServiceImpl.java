@@ -1,6 +1,6 @@
 package com.ardent.backend.service;
 
-import com.ardent.backend.dto.MessageDTO;
+import com.ardent.backend.dto.MessageRequestDTO;
 import com.ardent.backend.entity.Message;
 import com.ardent.backend.repository.MessageRepository;
 import lombok.extern.slf4j.Slf4j;
@@ -18,20 +18,21 @@ public class MessageServiceImpl implements MessageService{
     private MessageRepository messageRepository;
 
     @Override
-    public void contact(MessageDTO messageDTO) {
-        log.info("Reached here with message DTO : " + messageDTO);
+    public void contact(MessageRequestDTO messageRequestDTO) {
+        log.info("Reached here with message DTO : " + messageRequestDTO);
 
         Message message = new Message();
-        message.setContactNo(messageDTO.getContact());
-        message.setMessage(messageDTO.getMessage());
-        message.setName(messageDTO.getName());
-        message.setEmail(messageDTO.getEmail());
+        message.setContactNo(messageRequestDTO.getContact());
+        message.setMessage(messageRequestDTO.getMessage());
+        message.setName(messageRequestDTO.getName());
+        message.setEmail(messageRequestDTO.getEmail());
         message.setCreatedAt(LocalDate.now());
 
 
         log.info("Sending the Data message to DB : " + message);
 
         messageRepository.save(message);
+        log.info("Message Saved successfully");
 
 
     }

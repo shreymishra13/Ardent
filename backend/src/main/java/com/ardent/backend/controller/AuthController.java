@@ -21,14 +21,15 @@ public class AuthController {
 
 
     @PostMapping("/signup")
-    public ResponseEntity<ApiResponseDTO> signup(@Valid @RequestBody SignupRequestDTO request){
+    public ResponseEntity<ApiResponseDTO<Void>> signup(@Valid @RequestBody SignupRequestDTO request){
 
 
             log.info("Reached here with SignupReqeustDTO :  "+  request);
             authService.signup(request);
             ApiResponseDTO apiResponseDTO = new ApiResponseDTO(
                     true ,
-                    "Signup Successfully, Please login. Redirecting!"
+                    "Signup Successfully, Please login. Redirecting!",
+                    null
 
             );
 

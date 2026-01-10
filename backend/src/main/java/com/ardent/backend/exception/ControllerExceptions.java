@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class ControllerExceptions {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<ApiResponseDTO> handleValidationException(MethodArgumentNotValidException ex){
+    public ResponseEntity<ApiResponseDTO<Void>> handleValidationException(MethodArgumentNotValidException ex){
         // Take the first validation error message (simple for learning)
         log.info("Got Some exception , " + ex.getMessage());
         log.error("Got Some exception , " + ex.getMessage());
@@ -23,16 +23,16 @@ public class ControllerExceptions {
                 .getFieldErrors()
                 .get(0)
                 .getDefaultMessage();
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ApiResponseDTO(false, errorMessage));
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ApiResponseDTO(false, errorMessage , null));
 
     }
     @ExceptionHandler(Exception.class)
-    public ResponseEntity<ApiResponseDTO> handleValidationException(Exception ex){
+    public ResponseEntity<ApiResponseDTO<Void>> handleValidationException(Exception ex){
         // Take the first validation error message (simple for learning)
         log.info("Got Some exception , " + ex.getMessage());
         log.error("Got Some exception , " + ex.getMessage());
         String errorMessage = ex.getMessage();
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ApiResponseDTO(false, errorMessage));
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ApiResponseDTO(false, errorMessage , null));
 
     }
 }

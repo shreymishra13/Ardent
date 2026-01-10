@@ -11,5 +11,6 @@ public enum Genre {
     FANTASY,
     ROMANCE,
     THRILLER,
-    OTHER
+    OTHER ,
+    PROGRAMMING
 }

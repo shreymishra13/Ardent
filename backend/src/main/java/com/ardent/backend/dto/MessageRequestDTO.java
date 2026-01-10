@@ -13,7 +13,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class MessageDTO {
+public class MessageRequestDTO {
 
 
     @NotBlank(message = "Name is required")

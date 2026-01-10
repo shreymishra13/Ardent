@@ -34,4 +34,7 @@ public class Book{
     private String sellerId;
     private LocalDate createdAt;
 
+    private String imageBase64;
+
+
 }
