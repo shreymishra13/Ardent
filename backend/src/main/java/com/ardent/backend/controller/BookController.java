@@ -30,11 +30,10 @@ public class BookController {
             consumes = MediaType.MULTIPART_FORM_DATA_VALUE
     )
     public ResponseEntity<ApiResponseDTO<Void>> addBook(@RequestPart("book") String bookString , @RequestPart("image")MultipartFile img) throws IOException {
-        ObjectMapper mapper = new ObjectMapper();
-        BookRequestDTO bookRequestDTO =
-                mapper.readValue(bookString, BookRequestDTO.class);
-        log.info("Recieved BookRequestDTO " + bookRequestDTO);
-        bookService.addBook(bookRequestDTO , img);
+
+
+
+        bookService.addBook(bookString , img);
         return ResponseEntity.status(HttpStatus.ACCEPTED).body(new ApiResponseDTO(
                 true,
                 "Book Added Successfully!",

@@ -20,7 +20,7 @@ public class BookResponseDTO{
     private Double price;
     private Double discount;
     private Integer stock;
-    private String imageBase64;
+    private String imgUrl;
 
 
 }

@@ -4,6 +4,7 @@ import com.ardent.backend.dto.BookRequestDTO;
 import com.ardent.backend.dto.BookResponseDTO;
 import com.ardent.backend.entity.Book;
 import com.ardent.backend.repository.BookRespository;
+import com.ardent.backend.storage.StorageService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,16 +25,27 @@ public class BookServiceImpl implements BookService{
     @Autowired
     BookRespository bookRespository;
 
+    @Autowired
+    StorageService storageService ;
+
     @Override
-    public void addBook(BookRequestDTO bookRequestDTO , MultipartFile img) throws IOException{
+    public void addBook(String bookString , MultipartFile img) throws IOException{
 
         if(img.isEmpty()){
             throw new RuntimeException("Image is required");
 
         }
+
+
+        ObjectMapper mapper = new ObjectMapper();
+        BookRequestDTO bookRequestDTO =
+                mapper.readValue(bookString, BookRequestDTO.class);
         log.info("Recieved BookRequestDTO " + bookRequestDTO);
 
-        String imgBase64 = Base64.getEncoder().encodeToString(img.getBytes());
+        String imgUrl = storageService.uploadFile(img);
+
+
+
         Book book = new Book();
         book.setBookName(bookRequestDTO.getBookName());
         book.setBookGenre(bookRequestDTO.getGenre());
@@ -42,7 +54,7 @@ public class BookServiceImpl implements BookService{
         book.setDiscount(bookRequestDTO.getDiscount());
         book.setCreatedAt(LocalDate.now());
         book.setDescription(bookRequestDTO.getDescription());
-        book.setImageBase64(imgBase64);
+        book.setImgUrl(imgUrl);
 
         log.info("Sending the book data to DB , " + book);
         bookRespository.save(book);

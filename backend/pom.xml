@@ -59,6 +59,13 @@
 			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>software.amazon.awssdk</groupId>
+			<artifactId>s3</artifactId>
+			<version>2.41.5</version>
+			<scope>compile</scope>
+		</dependency>
+
 
 	</dependencies>
 
