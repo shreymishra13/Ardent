@@ -1,2 +1,12 @@
-.idea
-sss
+# IntelliJ IDEA
+.idea/
+
+
+
+# Logs
+logs/
+*.log
+
+
+#environment variables
+.env
