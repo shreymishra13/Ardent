@@ -1,0 +1,55 @@
+
+
+a{
+    text-decoration: none;
+}
+.navigation-bar {
+    display: flex;
+    background-color: rgb(235, 233, 233);
+}
+
+.navigation-bar h3 {
+    margin-top: 41px;
+    margin-left: 37px;
+    color: black;
+    font-family: 'Merienda', cursive;
+}
+
+.links {
+    display: flex;
+    width: 70vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.links h6 {
+    transition: transform 0.1s ease;
+}
+
+.links h6:hover {
+    transform: scale(1.1);
+}
+
+
+.links h6 {
+    padding: 35px;
+   color: black;
+}
+/* 
+
+
+.links h6:hover {
+    color: black;
+    font-size: 110%;
+} */
+
+.registeration {
+    display: flex;
+    align-items: center;
+}
+
+.pt-serif-regular {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
