@@ -29,7 +29,7 @@ public class BookServiceImpl implements BookService{
     StorageService storageService ;
 
     @Override
-    public void addBook(String bookString , MultipartFile img) throws IOException{
+    public void addBook(BookRequestDTO bookRequestDTO , MultipartFile img) throws IOException{
 
         if(img.isEmpty()){
             throw new RuntimeException("Image is required");
@@ -37,9 +37,7 @@ public class BookServiceImpl implements BookService{
         }
 
 
-        ObjectMapper mapper = new ObjectMapper();
-        BookRequestDTO bookRequestDTO =
-                mapper.readValue(bookString, BookRequestDTO.class);
+
         log.info("Recieved BookRequestDTO " + bookRequestDTO);
 
         String imgUrl = storageService.uploadFile(img);

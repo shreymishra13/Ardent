@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.List;
 
 public interface BookService {
-    public void addBook(String strBook , MultipartFile img) throws IOException;
+    public void addBook(BookRequestDTO bookRequestDTO , MultipartFile img) throws IOException;
 
     public List<BookResponseDTO> getAllBooks();
 

@@ -29,20 +29,26 @@ public class BookController {
             value = "/book",
             consumes = MediaType.MULTIPART_FORM_DATA_VALUE
     )
-    public ResponseEntity<ApiResponseDTO<Void>> addBook(@RequestPart("book") String bookString , @RequestPart("image")MultipartFile img) throws IOException {
+    public ResponseEntity<ApiResponseDTO<Void>> addBook(
+            @ModelAttribute BookRequestDTO bookRequestDTO,
+            @RequestPart("image") MultipartFile img
+    ) throws IOException {
 
+        bookService.addBook(bookRequestDTO, img);
 
-
-        bookService.addBook(bookString , img);
-        return ResponseEntity.status(HttpStatus.ACCEPTED).body(new ApiResponseDTO(
-                true,
-                "Book Added Successfully!",
-                null
-
-        ));
-
-
+        return ResponseEntity.status(HttpStatus.ACCEPTED)
+                .body(new ApiResponseDTO<>(
+                        true,
+                        "Book Added Successfully!",
+                        null
+                ));
     }
+
+
+
+
+
+
 
 
     @GetMapping("allBooks")
