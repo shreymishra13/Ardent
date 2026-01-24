@@ -19,3 +19,5 @@ import { Footer } from './layout/footer/footer';
 export class App {
   protected title = 'ardent-angular';
 }
+
+
