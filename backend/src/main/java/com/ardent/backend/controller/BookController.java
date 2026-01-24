@@ -17,6 +17,8 @@ import tools.jackson.databind.ObjectMapper;
 import java.io.IOException;
 import java.util.List;
 
+
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/books")
 @Slf4j
@@ -51,7 +53,7 @@ public class BookController {
 
 
 
-    @GetMapping("allBooks")
+    @GetMapping()
     public ResponseEntity<ApiResponseDTO<List<BookResponseDTO>>> getAllBooks(){
 
       List<BookResponseDTO> allBooks = bookService.getAllBooks();
