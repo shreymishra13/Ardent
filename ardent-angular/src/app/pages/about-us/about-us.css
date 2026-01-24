@@ -1,0 +1,20 @@
+
+.about-us-content {
+    width: 90vw;
+    text-align: left;
+    margin: auto;
+    margin-top: 40px;
+    font-family: 'PT Serif', serif;
+}
+
+.about-us {
+    color: white;
+    background-color: #301E67;
+    padding: 120px;
+    width: 95vw;
+    margin: auto;
+    text-align: center;
+    font-family: 'PT Serif', serif;
+    font-size: 90px;
+    margin-top: 25px;
+}

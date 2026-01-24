@@ -1,0 +1,20 @@
+
+.refund-text {
+    height: 70vh;
+    padding-top: 20vh;
+    align-items: center;
+}
+
+.refund-text h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 300%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.refund-text h5 {
+    margin-top: 5vh;
+    /* font-size: x-large; */
+    width: 60vw;
+    margin: auto;
+}
