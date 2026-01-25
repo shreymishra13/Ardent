@@ -13,9 +13,9 @@
                 <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
                   <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Add Books</p>
                  <!-- adding form -->
-                  <form class="mx-1 mx-md-4" action="http://localhost:8080/books/book" method="post"  enctype="multipart/form-data">
+                  <form class="mx-1 mx-md-4 text-left" action="http://localhost:8080/books/book" method="post"  enctype="multipart/form-data">
                     <div class="d-flex flex-row align-items-center mb-4">
-                      <div class="form-outline flex-fill mb-0">
+                      <div class="form-outline flex-fill mb-0 text-left">
                         <label class="form-label" for="bookName">Book Name<span class="text-danger">&ast;</span></label>
                         <input type="text" class="form-control" name="bookName"  required/>
                       </div>
@@ -36,6 +36,7 @@
                       <div class="form-outline flex-fill mb-0">
                         <label class="form-label" for="form3Example4c">Book Type<span class="text-danger">&ast;</span></label>
                         <select  name="genre" class="form-control" required>
+                            <option value="" disabled selected>-- Select Genre --</option>
                           <option *ngFor="let genre of genres" [value]="genre.code">{{genre.displayName}}</option>
                         </select>
                       </div>

@@ -9,8 +9,14 @@ import { Books } from './pages/books/books';
 import { Reviews } from './pages/reviews/reviews';
 import { PrivacyPolicies } from './pages/privacy-policies/privacy-policies';
 import { TermAndConditions } from './pages/term-and-conditions/term-and-conditions';
+import { Carousel } from './components/carousel/carousel';
+import { Home } from './pages/home/home';
 
 export const routes: Routes = [
+    {
+        path:"",
+        component:Home
+    },
     {
         path:"refundPolifies",
         component:RefundPolicies
@@ -49,5 +55,6 @@ export const routes: Routes = [
         path:"termsConditions",
         component:TermAndConditions
     }
+    
     
 ];
