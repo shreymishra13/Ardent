@@ -3,25 +3,45 @@
 
     <form>
         <h1 class="text-center">Contact Us</h1>
+
+
+        <div *ngIf="apiResponse?.success" class="alert alert-success" role="alert">
+    Form Submitted Successfully
+</div>
+<div *ngIf="apiResponse && !apiResponse.success" class="alert alert-danger" role="alert">
+  Some error has occurred please retry or drop an email : admin@ardent.com
+</div>
         <div class="form-group my-3">
             <label for="name">Name</label>
-            <input type="text" class="form-control" placeholder="Enter your name here">
-
+            <input [formControl]="name" type="text" class="form-control" placeholder="Enter your name here" required>
+            <div *ngIf="name.invalid && name.touched" class="text-danger small mt-1">
+                <span *ngIf="name.errors?.['required']">Name is required</span>
+                <span *ngIf="name.errors?.['minlength']">Name must be at least 2 characters</span>
+            </div>
         </div>
         <div class="form-group my-3">
             <label for="email">Email</label>
-            <input type="email" class="form-control"  placeholder="Enter your email here">
-
+            <input [formControl]="email" type="email" class="form-control"  placeholder="Enter your email here" required>
+            <div *ngIf="email.invalid && email.touched" class="text-danger small mt-1">
+                <span *ngIf="email.errors?.['required']">Email is required</span>
+                <span *ngIf="email.errors?.['email']">Please enter a valid email</span>
+            </div>
         </div>
         <div class="form-group my-3">
             <label for="contact">Contact</label>
-            <input type="number" class="form-control" placeholder="Enter your contact here">
-
+            <input [formControl]="contact" type="number" class="form-control" placeholder="Enter your contact here" required>
+            <div *ngIf="contact.invalid && contact.touched" class="text-danger small mt-1">
+                <span *ngIf="contact.errors?.['required']">Contact is required</span>
+                <span *ngIf="contact.errors?.['pattern']">Contact must be 10 digits</span>
+            </div>
         </div>
         <div class="form-group my-3">
             <label for="message">Message</label>
-           <textarea name="message" class="form-control" cols="30" rows="10" maxlength="200" placeholder="I want to contact you because..." ></textarea>
-
+           <textarea [formControl]="message" name="message" class="form-control" cols="30" rows="10" maxlength="200" placeholder="I want to contact you because..."  required></textarea>
+           <div *ngIf="message.invalid && message.touched" class="text-danger small mt-1">
+                <span *ngIf="message.errors?.['required']">Message is required</span>
+                <span *ngIf="message.errors?.['minlength']">Message must be at least 10 characters</span>
+            </div>
         </div>
 
 
@@ -29,6 +49,7 @@
 
             <small id="emailHelp" class="form-text text-muted">We'll never share your details with anyone else.</small>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+      
+        <button type="button" (click)="submitForm()" [disabled]="name.invalid || email.invalid || contact.invalid || message.invalid" class="btn btn-primary">Submit</button>
     </form>
 </div>
