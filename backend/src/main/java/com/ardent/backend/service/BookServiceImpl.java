@@ -53,6 +53,7 @@ public class BookServiceImpl implements BookService{
         book.setCreatedAt(LocalDate.now());
         book.setDescription(bookRequestDTO.getDescription());
         book.setImgUrl(imgUrl);
+        book.setPrice(bookRequestDTO.getPrice());
 
         log.info("Sending the book data to DB , " + book);
         bookRespository.save(book);

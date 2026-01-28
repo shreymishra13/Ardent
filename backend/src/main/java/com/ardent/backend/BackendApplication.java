@@ -10,8 +10,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @Slf4j
 public class BackendApplication {
 
-	@Value("${spring.data.mongodb.database}")
-	private String dbName;
+
+	private String dbName = "eBookDB";
 
 	@PostConstruct
 	public void logDb() {
