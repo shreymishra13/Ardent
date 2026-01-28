@@ -11,6 +11,7 @@ import { PrivacyPolicies } from './pages/privacy-policies/privacy-policies';
 import { TermAndConditions } from './pages/term-and-conditions/term-and-conditions';
 import { Carousel } from './components/carousel/carousel';
 import { Home } from './pages/home/home';
+import { SignUp } from './pages/sign-up/sign-up';
 
 export const routes: Routes = [
     {
@@ -54,6 +55,9 @@ export const routes: Routes = [
     },{
         path:"termsConditions",
         component:TermAndConditions
+    },{
+        path:"signup",
+        component:SignUp
     }
     
     
