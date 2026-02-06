@@ -1,6 +1,7 @@
 package com.ardent.backend.storage;
 
 import com.ardent.backend.configuration.AppCache;
+import com.ardent.backend.constants.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -20,6 +21,8 @@ public class StorageServiceImpl implements StorageService{
 
     @Autowired
     private S3Client s3Client;
+    @Autowired
+    private Constants constants;
 
     @Override
     public String uploadFile(MultipartFile file) throws IOException {
@@ -29,7 +32,7 @@ public class StorageServiceImpl implements StorageService{
 
         // 2. Build S3 upload request
         PutObjectRequest putObjectRequest = PutObjectRequest.builder()
-                .bucket(appCache.getAppCacheMap().get("aws.s3.bucketName"))
+                .bucket(appCache.getAppCacheMap().get(constants.getAWS_BUCKET_NAME()))
                 .key(fileName)
                 .contentType(file.getContentType())
                 .build();
@@ -41,7 +44,7 @@ public class StorageServiceImpl implements StorageService{
         );
 
         // 4. Return public S3 URL
-        return "https://" + appCache.getAppCacheMap().get("aws.s3.bucketName") + ".s3." + appCache.getAppCacheMap().get("aws.s3.region") + ".amazonaws.com/" + fileName;
+        return "https://" + appCache.getAppCacheMap().get(constants.getAWS_BUCKET_NAME()) + ".s3." + appCache.getAppCacheMap().get(constants.getAWS_REGION()) + ".amazonaws.com/" + fileName;
 
        // s3://amzn-s3-book-img/2c08e209-f65e-4921-863a-64a518ca9a6a_Screenshot 2026-01-10 144223.png
     }
