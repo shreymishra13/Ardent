@@ -5,6 +5,7 @@ import com.ardent.backend.entity.AppCacheEntity;
 import com.ardent.backend.repository.AppCacheRepository;
 import jakarta.annotation.PostConstruct;
 import lombok.Getter;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -14,6 +15,7 @@ import java.util.Map;
 
 @Component
 @Getter
+@Slf4j
 public class AppCache {
 
     @Autowired
@@ -32,6 +34,8 @@ public class AppCache {
             appCacheMap.put(appCacheEntity.getKey() , appCacheEntity.getValue());
 
         }
+        log.info("Total appCache count : "+ appCacheMap.size());
+        log.info("AppCache map after retrieving it from DB : " + appCacheMap);
 
     }
 
